@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SnifferStartup.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">practices</a> &gt; <a href="index.source.html" class="el_package">com.axonactive.training.sniffer</a> &gt; <span class="el_source">SnifferStartup.java</span></div><h1>SnifferStartup.java</h1><pre class="source lang-java linenums">package com.axonactive.training.sniffer;
+
+import java.util.Date;
+
+import javax.annotation.PostConstruct;
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import com.axonactive.training.address.Address;
+import com.axonactive.training.gpslocation.GpsLocation;
+
+@Startup
+@Singleton
+
+<span class="nc" id="L17">public class SnifferStartup {</span>
+	@PersistenceContext  
+	EntityManager em;
+	
+	@PostConstruct
+	public void init() {
+<span class="nc" id="L23">		Sniffer sniffer = new Sniffer(&quot;0A-0B-0C-1A-2A-3C&quot;,new Address(&quot;VietNam&quot;,&quot;Can Tho&quot;,&quot;Ninh Kieu&quot;,&quot;&quot;,&quot;Tran Van Hoai&quot;,&quot;&quot;,new Date(),new Date(),new GpsLocation()));</span>
+<span class="nc" id="L24">		Sniffer abc = new Sniffer(&quot;0A-0B-0C-1A-2A-3C&quot;, &quot;name&quot;, &quot;8C-EC-4B-49-50-6A&quot;,null, new Address(&quot;VietNam&quot;,&quot;Can Tho&quot;,&quot;Ninh Kieu&quot;,&quot;&quot;,&quot;Tran Van Hoai&quot;,&quot;&quot;,new Date(),new Date(),new GpsLocation()));</span>
+<span class="nc" id="L25">		sniffer.setCode(&quot;123456&quot;);</span>
+<span class="nc" id="L26">		em.persist(sniffer);</span>
+<span class="nc" id="L27">		abc.setCode(&quot;123457&quot;);</span>
+<span class="nc" id="L28">		em.persist(abc);</span>
+<span class="nc" id="L29">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

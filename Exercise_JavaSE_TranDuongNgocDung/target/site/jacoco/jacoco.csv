@@ -1,0 +1,10 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+practices,com.axonactive.training.util,Assertion,18,0,4,0,6,0,4,0,2,0
+practices,com.axonactive.training.gpslocation,GpsLocation,21,3,0,0,4,1,6,1,6,1
+practices,com.axonactive.training.config,RestApplicationConfig,3,0,0,0,1,0,1,0,1,0
+practices,com.axonactive.training.address,Address,76,42,0,0,14,15,18,5,18,5
+practices,com.axonactive.training.sniffer,SnifferResource,53,0,0,0,9,0,6,0,6,0
+practices,com.axonactive.training.sniffer,SnifferStartup,67,0,0,0,8,0,2,0,2,0
+practices,com.axonactive.training.sniffer,SnifferService,117,216,12,48,30,46,16,27,7,6
+practices,com.axonactive.training.sniffer,Status,3,56,0,0,1,8,1,2,1,2
+practices,com.axonactive.training.sniffer,Sniffer,296,29,54,0,10,9,39,7,12,7
