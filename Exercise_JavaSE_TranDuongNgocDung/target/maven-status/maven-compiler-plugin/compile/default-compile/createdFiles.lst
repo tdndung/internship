@@ -1,9 +1,0 @@
-com\axonactive\training\address\Address.class
-com\axonactive\training\util\Assertion.class
-com\axonactive\training\sniffer\SnifferStartup.class
-com\axonactive\training\gpslocation\GpsLocation.class
-com\axonactive\training\sniffer\Status.class
-com\axonactive\training\sniffer\SnifferResource.class
-com\axonactive\training\sniffer\SnifferService.class
-com\axonactive\training\config\RestApplicationConfig.class
-com\axonactive\training\sniffer\Sniffer.class
