@@ -52,7 +52,7 @@ public class SnifferResource {
 	@Consumes({MediaType.APPLICATION_JSON})
 	public Response delete(@PathParam("code") String code) {
 		snifferService.delete(code);
-		return Response.created(URI.create("code=" + code)).build();
+		return Response.status(Response.Status.OK).build();
 	}
 	
 	@PUT

@@ -57,7 +57,7 @@ public class SnifferServiceTest {
 
 		assertEquals("123456", snifferABC.getCode());
     }
-	@Test
+	@Test (expected = IllegalArgumentException.class)
 	public void givenMacAdresIsNullWheChecknMacAddressThenReturnFalse(){
 		String macAddress = null;
 		service.checkMacAddress(macAddress);

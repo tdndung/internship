@@ -1,10 +1,207 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+	<meta charset="ISO-8859-1">
+	<title>Add Sniffer</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<style type="text/css">
+		.container{
+			margin-top: 20px;
+		}
+		.panel{
+			box-shadow: #ececec 5px 5px 5px 0px;
+		}
+		.panel-body{
+			background: #E5F2FD;
+		}
+		.panel-body:hover{
+			background: #68D7F9;
+		}
+		.panel-footer{
+			background: #fff;
+		}
+		.cancel:hover{
+			background: #ff4d4d;
+			border: none;
+			color: #fff;
+		}
+		.submit:hover{
+			background:  #1a75ff;
+			border: none;
+			color: #fff;
+		}
+		.fa-minus-circle{
+			 visibility: hidden;
+		}
+		.panel:hover .fa-minus-circle{
+			 visibility: visible;
+		}
+	</style>
 </head>
 <body>
-<h1>Xin Chao Ban!</h1>
+
+	<div class="container">
+		<div class="row">
+
+<script type="text/javascript">
+                        var addr = "dev.yourserver.yourorg.tld"
+                        var port = "5001"
+                    
+                        function Get(whateverUrl){
+                            var Httpreq = new XMLHttpRequest(); // a new request
+                            Httpreq.open("GET",whateverUrl,false);
+                            Httpreq.send(null);
+                            return Httpreq.responseText;          
+                        }
+
+                      
+                    
+                        var row = JSON.parse(Get("http://localhost:8080/Sniffer/rest/sniffers"));
+                        whatever_qty = row.length;
+                        for (var i = 0; i < whatever_qty; i++) {
+                            document.write("<div class='well'><h4>"+row[i].name+"</h4><br>Code:"+row[i].code+"<br>Mac address:"+row[i].macaddress+"<br>Status:"+row[i].status+"</div>")
+                        }
+                    </script>
+			<!-- col 4 -->
+			<div class="col-md-4 col-sm-12 col-xs-12"  style="overflow-y:scroll; height:600px;">
+				<div> 
+					<h3><i class="fa fa-plus-circle"></i> Add new sniffer</h3>
+
+				</div>
+
+				<!-- sniffer info 1-->
+				<div class="panel panel-default">
+					<div class="panel-body">Panel Content</div>
+					<div class="panel-footer"><i class="fa fa-minus-circle"></i></div>
+				</div>
+				<!-- .sniffer info 1-->
+
+				<!-- sniffer info 2-->
+				<div class="panel panel-default">
+					<div class="panel-body">Panel Content</div>
+					<div class="panel-footer"><i class="fa fa-minus-circle"></i></div>
+				</div>
+				<!-- .sniffer info 2-->
+
+				<!-- sniffer info 3-->
+				<div class="panel panel-default">
+					<div class="panel-body">Panel Content</div>
+					<div class="panel-footer"><i class="fa fa-minus-circle"></i></div>
+				</div>
+				<!-- .sniffer info 3-->
+
+				<!-- sniffer info 4-->
+				<div class="panel panel-default">
+					<div class="panel-body">Panel Content</div>
+					<div class="panel-footer"><i class="fa fa-minus-circle"></i></div>
+				</div>
+				<!-- .sniffer info 4-->
+
+			</div>
+
+			<!-- .col 4 -->
+
+			<!-- col 8 -->
+			<div class="col-md-8 col-sm-12">
+				<h2>Add new sniffer</h2>
+				<!-- form add -->
+				<form class="form-horizontal" action="#">
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="name">Name:</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="name" placeholder="ngoc Dung">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="macaddress">Mac Address:</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="macaddress" placeholder="8C-EC-4B-49-50-6A">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="pwd">Status:</label>
+						<div class="col-sm-10"> 
+							 <select class="form-control" id="sel1">
+						        <option>1</option>
+						        <option>2</option>
+						        <option>3</option>
+						        <option>4</option>
+						      </select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Country">Country:</label>
+						<div class="col-sm-10"> 
+							<input type="text" class="form-control" id="Country" placeholder="Viet Nam">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Province">Province:</label>
+						<div class="col-sm-10"> 
+							<input type="text" class="form-control" id="Province" placeholder="Can Tho">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="District">District:</label>
+						<div class="col-sm-10"> 
+							<input type="text" class="form-control" id="District" placeholder="Ninh Kieu">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Ward">Ward:</label>
+						<div class="col-sm-10"> 
+							<input type="text" class="form-control" id="Ward" placeholder="Tran Khanh Du">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Street">Street:</label>
+						<div class="col-sm-10"> 
+							<input type="text" class="form-control" id="Street" placeholder="Tran Van Hoai">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="HouseNr">HouseNr:</label>
+						<div class="col-sm-10"> 
+							<input type="text" class="form-control" id="HouseNr" placeholder="178">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="ValidFrom">ValidFrom:</label>
+						<div class="col-sm-10"> 
+							<input type="date" class="form-control" id="ValidFrom" placeholder="178">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="ValidTo">ValidTo:</label>
+						<div class="col-sm-10"> 
+							<input type="date" class="form-control" id="ValidTo" placeholder="178">
+						</div>
+					</div>
+
+					<div class="form-group"> 
+						<div class="col-sm-offset-5 col-sm-2">
+							<button type="submit" class="btn btn-default cancel">Cancel</button>
+						</div>
+						<div class=" col-sm-offset-3 col-sm-2">
+							<button type="submit" class="btn btn-default submit">Submit</button>
+						</div>
+					</div>
+				</form>
+				<!-- .form add -->
+			</div>
+			<!-- .col 8 -->
+		</div>
+	</div>
 </body>
 </html>
