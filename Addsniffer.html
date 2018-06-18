@@ -53,9 +53,8 @@
 	<div class="container">
 		<div class="row">
 <!-- show data -->
-<script type="text/javascript">
-                        var addr = "dev.yourserver.yourorg.tld"
-                        var port = "5001"
+<!-- <script type="text/javascript">
+             
                     
                         function Get(whateverUrl){
                             var Httpreq = new XMLHttpRequest(); // a new request
@@ -71,7 +70,7 @@
                         for (var i = 0; i < whatever_qty; i++) {
                             document.write("<div class='well'><h4>"+row[i].name+"</h4><br>Code:"+row[i].code+"<br>Mac address:"+row[i].macaddress+"<br>Status:"+row[i].status+"</div>")
                         }
-                    </script>
+                    </script> -->
                     <!-- .show data -->
 			<!-- col 4 -->
 			<div class="col-md-4 col-sm-12 col-xs-12"  style="overflow-y:scroll; height:600px;">
@@ -79,34 +78,32 @@
 					<h3><i class="fa fa-plus-circle"></i> Add new sniffer</h3>
 
 				</div>
+<script type="text/javascript">
+             
+                    
+                        function Get(whateverUrl){
+                            var Httpreq = new XMLHttpRequest(); // a new request
+                            Httpreq.open("GET",whateverUrl,false);
+                            Httpreq.send(null);
+                            return Httpreq.responseText;          
+                        }
 
+                        var row = JSON.parse(Get("http://localhost:8080/Sniffer/rest/sniffers"));
+                        whatever_qty = row.length;
+                        for (var i = 0; i < whatever_qty; i++) {
+                            document.write('<div class="panel panel-default">')
+                             document.write('<div class="panel-body">'+row[i].name+'</div>')
+                              document.write('<div class="panel-footer"><i class="fa fa-minus-circle"></i></div></div>')
+                        }
+                    </script>
 				<!-- sniffer info 1-->
-				<div class="panel panel-default">
+		<!-- 		<div class="panel panel-default">
 					<div class="panel-body">Panel Content</div>
 					<div class="panel-footer"><i class="fa fa-minus-circle"></i></div>
-				</div>
+				</div> -->
 				<!-- .sniffer info 1-->
 
-				<!-- sniffer info 2-->
-				<div class="panel panel-default">
-					<div class="panel-body">Panel Content</div>
-					<div class="panel-footer"><i class="fa fa-minus-circle"></i></div>
-				</div>
-				<!-- .sniffer info 2-->
-
-				<!-- sniffer info 3-->
-				<div class="panel panel-default">
-					<div class="panel-body">Panel Content</div>
-					<div class="panel-footer"><i class="fa fa-minus-circle"></i></div>
-				</div>
-				<!-- .sniffer info 3-->
-
-				<!-- sniffer info 4-->
-				<div class="panel panel-default">
-					<div class="panel-body">Panel Content</div>
-					<div class="panel-footer"><i class="fa fa-minus-circle"></i></div>
-				</div>
-				<!-- .sniffer info 4-->
+			
 
 			</div>
 
